@@ -66,7 +66,7 @@ table {
 
 /* end of CSS reset */
 
-/* while designing */
+/* while designing use the following 2 styles */
 body {
     background-color: #0ff;
 }
@@ -78,20 +78,55 @@ div, nav, section, footer {
 
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 1rem; 
 }
 
 /* Navigation Section */
+
+/* this selects the top navigation <nav> */
 .top-navigation {
   background-color: #fff;
 }
 
-.top-navigation > .content {
+/* separating .content div styling here in case want to use 
+   identical styling for other .content divs */
+.content {
   width: 60.625rem;
-  height: 4.375rem;
   margin: 0 auto;
+  padding: 0 0.9375rem; /* 15px = 0.9375rem */ 
 }
 
-nav img {
-  width: 1.625rem;
-  margin: 1rem 0 0 1rem;
+/* this selects the <div> wrapping the navigation image and <ul> */
+.top-navigation > .content {
+  height: 4.375rem;
 }
+
+.top-navigation img {
+  width: 1.625rem; /* 26px = 1.625rem */
+  /* height: 4.375rem; 70px */
+  margin: 0.9375rem 0 0 0; /* 15px = 0.9375rem */
+}
+
+.top-navigation ul {
+  float: right;
+  margin: 1.5625rem 0 0 0; /* 25px = 1.5625rem */ 
+  /* letter-spacing: 0.03em; */
+  /* only for webkit ?? */
+  -webkit-font-smoothing: antialiased;
+}
+
+.top-navigation li {
+  display: inline-block;
+  margin: 0 0 0 1.5625rem; /* 25px = 1.5625rem */
+  color: #838994;
+  /* http://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp */
+  /* transition: property duration timing-function delay|initial|inherit; */
+  transition: color 0.25s ease;  
+}
+
+.top-navigation li:hover {
+  cursor: pointer;
+  color: #333333;
+}
+
+/* end Navigation Section */
