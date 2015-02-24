@@ -86,6 +86,9 @@ body {
 /* this selects the top navigation <nav> */
 .top-navigation {
   background-color: #fff;
+  /* ?? ask about this and position:relative for .introduction */
+  position: fixed;
+  width: 100%;
 }
 
 /* separating .content div styling here in case want to use 
@@ -118,15 +121,67 @@ body {
 .top-navigation li {
   display: inline-block;
   margin: 0 0 0 1.5625rem; /* 25px = 1.5625rem */
-  color: #838994;
-  /* http://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp */
-  /* transition: property duration timing-function delay|initial|inherit; */
-  transition: color 0.25s ease;  
 }
 
-.top-navigation li:hover {
+.top-navigation a {
+  color: #838994;
+  text-decoration: none;
+  /* http://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp */
+  /* transition: property duration timing-function delay|initial|inherit; */
+  transition: color 0.25s ease;   
+}
+
+.top-navigation a:hover {
   cursor: pointer;
   color: #333333;
 }
 
 /* end Navigation Section */
+
+/* Introduction Section */
+
+.introduction {
+  /* ?? uncommenting below causes <nav> to 'disappear' */
+  /* position: relative;
+  z-index: 1; */
+  height: 45.9375rem; /* 735px */
+  text-align: center;
+  color: #fff;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  /* background: color position/size repeat origin clip attachment image|initial|inherit; */
+  background: center bottom/cover no-repeat url(../images/first-background.jpg);
+  /* ?? I'm not seeing that overflow:auto is needed */
+  /* overflow: auto; */
+}
+
+.introduction h1 {
+  margin-top: 17.5rem;
+  font-size: 3.125rem;
+}
+
+.introduction h3 {
+  margin-top: 1.25rem;
+  font-size: 1.563rem;
+}
+
+.introduction .big-button {
+  width: 9.6875rem; /* 155px */
+  height: 3.3125rem; /* 53px */
+  margin-top: 1.563rem;
+  /*background-color: rgba();*/
+  background-color: #f15a29;
+  color: #fff;
+  font-size: 1.125rem;
+  border-radius: 0.25rem;
+  border: 0px;
+  transition: background-color 0.25s ease;
+}
+
+.introduction .big-button:hover {
+  background-color: #d9400e;
+  cursor: pointer;
+}
+
+/* end Introduction Section */
+
