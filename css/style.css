@@ -91,3 +91,7 @@ body {
   margin: 0 auto;
 }
 
+nav img {
+  width: 1.625rem;
+  margin: 1rem 0 0 1rem;
+}
