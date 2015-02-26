@@ -206,7 +206,6 @@ body {
 
 .cases .content {
   text-align: center;
-  overflow: auto;
 }
 
 .cases h2 {
@@ -215,16 +214,14 @@ body {
   font-weight: 300;
 }
 
-.devices li {
-  display: inline-block;
-}
-
 .devices > li {
-  width: 33.3333333%;
-  /* ?? discuss what happens(ed) when added this float - namely, white background was taken away */
+  width: 33.333%;
+  /* even though the li width is 1/3 of the width of 
+     .content, without the float:left below, there 
+      would be a small gap between the li elements;
+      see: https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+  */
   float: left;
-  /* overflow:auto on .cases .content removed the need for below background color */
-  /* background-color: #fff; */
 }
 
 .cases img {
@@ -232,7 +229,8 @@ body {
   height: 7.9375rem; /* 127px */
 }
 
-.cases .devices h3 {
+/* .devices selects the ul */
+.devices h3 {
   font-weight: 400;
   font-size: 1.5625rem; /* 25px */
   margin: 2.5rem 0px 1.875rem; /* 40px 0 30px */
