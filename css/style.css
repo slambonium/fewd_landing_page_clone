@@ -68,21 +68,21 @@ table {
 
 /* while designing use the below 4 styles */
 
-body {
+/*body {
     background-color: #0ff;
-}
+}*/
 
-div, nav, section, footer {
+/*div, nav, section, footer {
   border: 1px solid #f00;
-}
+}*/
 
-ul {
+/*ul {
   border: 1px solid #0f0;
-}
+}*/
 
-li {
+/*li {
   border: 1px solid #00f;
-}
+}*/
 
 /* while designing use the above 4 styles */
 
@@ -100,7 +100,10 @@ body {
   background-color: #fff;
   /* ?? ask about this and position:relative for .introduction */
   position: fixed;
+  top: 0;
   width: 100%;
+  height: 4.375rem;
+  border-bottom: 1px solid #ddd;
 }
 
 /* separating .content div styling here in case want to use 
@@ -112,9 +115,9 @@ body {
 }
 
 /* this selects the <div> wrapping the navigation image and <ul> */
-.top-navigation > .content {
+/*.top-navigation > .content {
   height: 4.375rem;
-}
+}*/
 
 .top-navigation img {
   width: 1.625rem; /* 26px = 1.625rem */
@@ -156,15 +159,15 @@ body {
   /* ?? uncommenting below causes <nav> to 'disappear' */
   /* position: relative;
   z-index: 1; */
-  height: 45.9375rem; /* 735px */
+  height: 45.9375rem; /* 45.9375rem = 735px */
   text-align: center;
   color: #fff;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   /* background: color position/size repeat origin clip attachment image|initial|inherit; */
-  background: center bottom/cover no-repeat url(../images/first-background.jpg);
-  /* ?? I'm not seeing that overflow:auto is needed */
-  /* overflow: auto; */
+  background: center top/cover no-repeat url(../images/first-background.jpg);
+  /* ?? discuss overflow:auto */
+  overflow: auto; 
 }
 
 .introduction h1 {
@@ -200,8 +203,10 @@ body {
 /* begin Cases Section */
 
 .cases {
-  height: 32.8125rem; /* 525px */
+  height: 32.8125rem; /* 32.8125rem = 525px */
   background-color: #fff;
+  /* ?? discuss overflow:auto */
+  overflow: auto;
 }
 
 .cases .content {
@@ -210,7 +215,13 @@ body {
 
 .cases h2 {
   font-size: 2.75rem; /* 44px */
-  margin: 1.625rem 0 3.125rem; /* 26px 0 50px */
+  /* margin: 2.625rem 0 3.125rem; 26px 0 50px */
+  /* below top margin value was calculated from:
+     .cases-height=525px - .cases-h2-font-size=44px
+      - .cases-img-height=127px - .devices-h3-font=25px
+      - .devices-margin-top=40px - .cases-h2-margin-bottom=50px
+      = 239px; to center vertically, use 0.5*239px = 119.5px = 7.46875rem */
+  margin: 7.46875rem 0 3.125rem; /* 119.5px 0 50px */
   font-weight: 300;
 }
 
@@ -233,7 +244,8 @@ body {
 .devices h3 {
   font-weight: 400;
   font-size: 1.5625rem; /* 25px */
-  margin: 2.5rem 0px 1.875rem; /* 40px 0 30px */
+  /* margin: 2.5rem 0px 1.875rem; 40px 0 30px */
+  margin-top: 2.5rem; /* 40px */
 }
 
 /* end Cases Section */
@@ -241,7 +253,45 @@ body {
 /* begin Footer Section */
 
 footer {
-  height: 15rem;
+  background-color: #fff;
+}
+
+.social .content {
+  height: 19.0625rem; /* 305px */
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.social h5 {
+  margin: 1.625rem 0; /* 26px */
+}
+
+.icons li {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 0.5rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 1.5rem;
+}
+
+.social .twitter {
+  color: #55acee;
+}
+
+.social .facebook {
+color: #4c66a4;
+}
+
+.social .instagram {
+color: #3f729b;
+}
+
+.social .copy {
+  margin: 1.625rem 0; /* 26px */  
+  -webkit-font-smoothing: antialiased;
+  color: #bbb;
 }
 
 /* end Footer Section */
