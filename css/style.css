@@ -66,13 +66,25 @@ table {
 
 /* end of CSS reset */
 
-/* while designing use the following 2 styles */
+/* while designing use the below 4 styles */
+
 body {
     background-color: #0ff;
 }
+
 div, nav, section, footer {
-    border: 1px solid #f00;
+  border: 1px solid #f00;
 }
+
+ul {
+  border: 1px solid #0f0;
+}
+
+li {
+  border: 1px solid #00f;
+}
+
+/* while designing use the above 4 styles */
 
 /* begin unique styling */
 
@@ -185,3 +197,53 @@ body {
 
 /* end Introduction Section */
 
+/* begin Cases Section */
+
+.cases {
+  height: 32.8125rem; /* 525px */
+  background-color: #fff;
+}
+
+.cases .content {
+  text-align: center;
+  overflow: auto;
+}
+
+.cases h2 {
+  font-size: 2.75rem; /* 44px */
+  margin: 1.625rem 0 3.125rem; /* 26px 0 50px */
+  font-weight: 300;
+}
+
+.devices li {
+  display: inline-block;
+}
+
+.devices > li {
+  width: 33.3333333%;
+  /* ?? discuss what happens(ed) when added this float - namely, white background was taken away */
+  float: left;
+  /* overflow:auto on .cases .content removed the need for below background color */
+  /* background-color: #fff; */
+}
+
+.cases img {
+  width: 7.9375rem; /* 127px */
+  height: 7.9375rem; /* 127px */
+}
+
+.cases .devices h3 {
+  font-weight: 400;
+  font-size: 1.5625rem; /* 25px */
+  margin: 2.5rem 0px 1.875rem; /* 40px 0 30px */
+}
+
+/* end Cases Section */
+
+/* begin Footer Section */
+
+footer {
+  height: 15rem;
+}
+
+/* end Footer Section */
